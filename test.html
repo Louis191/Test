@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            color: white;
+            min-height: 100vh;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+            color: #fff;
+        }
+        .result strong {
+            font-size: 1.2em;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form method="post" action="">
+        <label for="amount">Enter Amount:</label>
+        <input type="number" id="amount" name="amount" placeholder="Amount (e.g., 100)" required>
+
+        <label for="from_currency">From Currency:</label>
+        <select id="from_currency" name="from_currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="LAK">LAK</option>
+            <option value="THB">THB</option>
+        </select>
+
+        <label for="to_currency">To Currency:</label>
+        <select id="to_currency" name="to_currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="LAK">LAK</option>
+            <option value="THB">THB</option>
+        </select>
+
+        <button type="submit">Convert</button>
+    </form>
